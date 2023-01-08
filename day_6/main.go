@@ -1,13 +1,24 @@
-
 package main
 
 import (
-    "aoc/util"
-    "os"
-    "fmt"
+	"aoc/util"
+	"fmt"
+	"os"
 )
 
+func find_distinct_characters(stream string, distinct_len int) int {
+	var letter_buffer string
+	for i := distinct_len; i < len(stream); i++ {
+		letter_buffer = stream[i-distinct_len : i]
+		if util.Unique(letter_buffer) {
+			return i
+		}
+	}
+	return -1
+}
+
 func main() {
+
 	data := util.Data(1, "\n")
 	data = data[:len(data)-1]
 
@@ -17,18 +28,18 @@ func main() {
 
 	part := os.Args[2]
 
-    fmt.Printf("Run part: %s\n", part)
+	fmt.Printf("Run part: %s\n", part)
 
-	sum := 0
+	data_stream := data[0]
 
-    for _,val := range data {
-	    fmt.Println(val)
+	start_of_distinct_series := -1
 
-        if sum == 3 {
-            break
-        }
+	if part == "1" {
+		start_of_distinct_series = find_distinct_characters(data_stream, 4)
+	} else {
+		start_of_distinct_series = find_distinct_characters(data_stream, 14)
+	}
 
-        sum++
-    }
+	fmt.Println(start_of_distinct_series)
 
 }

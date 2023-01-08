@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	//"unicode"
 )
 
 func contains_one_another(ranges []string) bool {
@@ -54,8 +53,6 @@ func overlaps(ranges []string) bool {
 		return true
 	}
 	return false
-
-    // 764 too low
 }
 
 func main() {
@@ -67,30 +64,22 @@ func main() {
 	}
 
 	part := os.Args[2]
-
-	fmt.Println(part)
-	fmt.Println(data[0])
-
 	sum := 0
 
 	for _, section_ranges := range data {
 
 		ranges := strings.Split(section_ranges, ",")
 
-
-        if part == "1" {
-            if contains_one_another(ranges) {
-                sum++
-            }
-        } else {
-            if overlaps(ranges) || contains_one_another(ranges) {
-                sum++
-            }
-        }
+		if part == "1" {
+			if contains_one_another(ranges) {
+				sum++
+			}
+		} else {
+			if overlaps(ranges) || contains_one_another(ranges) {
+				sum++
+			}
+		}
 	}
 
 	fmt.Println(sum)
-
-	//    13-23,14-24
-	//    13-65,13-64
 }
