@@ -1,11 +1,16 @@
-
 package main
 
 import (
-    "aoc/util"
-    "os"
-    "fmt"
+	"aoc/util"
+	"fmt"
+	"os"
 )
+
+func add_pending_value(cycle int, pending_values map[int]int) int {
+	rv := pending_values[cycle]
+	delete(pending_values, cycle)
+	return rv
+}
 
 func main() {
 	data := util.Data(1, "\n")
@@ -17,18 +22,81 @@ func main() {
 
 	part := os.Args[2]
 
-    fmt.Printf("Run part: %s\n", part)
+	fmt.Printf("Run part: %s\n", part)
 
+	var val string
+	var command string
+	var add int
+
+	cycle := 1
+	register := 1 // sprite start position
+	const (
+		lit           = '#'
+		dark          = '.'
+		sprite_length = 3
+	)
+	pending_values := make(map[int]int)
 	sum := 0
 
-    for _,val := range data {
-	    fmt.Println(val)
+	//display := [6][40]rune{}
+	display := [241]rune{}
+	_ = display
 
-        if sum == 3 {
-            break
-        }
+	//for cycle, val := range data {
+	for {
+		// start of cycle
+		register += add_pending_value(cycle, pending_values)
 
-        sum++
-    }
+		// during cycle
 
+		if part == "1" {
+			// calculate signal strenghts
+			if (cycle-20)%40 == 0 {
+				sum += cycle * register
+			}
+		} else {
+			// draw display
+			fmt.Println("------")
+			fmt.Printf("During cycle: %d\n", cycle)
+			fmt.Printf("Register value is: %d\n", register)
+			if cycle % 40 >= register && cycle % 40 < (register+sprite_length) {
+				display[cycle-1] = lit
+			} else {
+				display[cycle-1] = dark
+			}
+            //fmt.Println(string(display[:240]))
+		}
+
+		if len(pending_values) > 0 {
+			cycle++
+			continue
+		}
+
+		if len(data) == 0 {
+			break
+		}
+
+		// pop row from data and scan values
+		val, data = data[0], data[1:]
+		fmt.Sscanf(val, "%s %d", &command, &add)
+
+		switch command {
+		case "noop":
+			cycle++
+			continue
+		case "addx":
+			pending_values[cycle+2] = add
+		}
+		cycle++
+
+	}
+
+	if part == "1" {
+		fmt.Printf("--------------\nSum of signal strengts: %d\n", sum)
+	} else {
+
+		for i := 0; i < 6; i++ {
+			fmt.Println(string(display[i*40 : (i+1)*40]))
+		}
+	}
 }

@@ -24,7 +24,7 @@ func main() {
     for _,val := range data {
 	    fmt.Println(val)
 
-        if sum == 3 {
+        if sum == 10 {
             break
         }
 
