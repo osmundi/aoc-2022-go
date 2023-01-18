@@ -3,6 +3,7 @@ package util
 import (
 	"fmt"
 	"os"
+	"strconv"
 	"strings"
 	"unicode"
 )
@@ -60,6 +61,17 @@ func ReverseArray[T any](arr []T) []T {
 	return arr
 }
 
+func ConvertArrayOfStringsToInts(arr []string) ([]int, error) {
+	var err error
+	b := make([]int, len(arr))
+	for i, s := range arr {
+		b[i], err = strconv.Atoi(strings.Trim(s, " "))
+		if err != nil {
+			return nil, err
+		}
+	}
+	return b, nil
+}
 
 // https://codereview.stackexchange.com/questions/223438/check-whether-a-string-has-all-unique-characters-time-efficiency
 func Unique(arr string) bool {

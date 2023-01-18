@@ -37,18 +37,13 @@ func main() {
 	)
 	pending_values := make(map[int]int)
 	sum := 0
-
-	//display := [6][40]rune{}
 	display := [241]rune{}
-	_ = display
 
-	//for cycle, val := range data {
 	for {
 		// start of cycle
 		register += add_pending_value(cycle, pending_values)
 
 		// during cycle
-
 		if part == "1" {
 			// calculate signal strenghts
 			if (cycle-20)%40 == 0 {
@@ -56,15 +51,11 @@ func main() {
 			}
 		} else {
 			// draw display
-			fmt.Println("------")
-			fmt.Printf("During cycle: %d\n", cycle)
-			fmt.Printf("Register value is: %d\n", register)
-			if cycle % 40 >= register && cycle % 40 < (register+sprite_length) {
+			if cycle%40 >= register && cycle%40 < (register+sprite_length) {
 				display[cycle-1] = lit
 			} else {
 				display[cycle-1] = dark
 			}
-            //fmt.Println(string(display[:240]))
 		}
 
 		if len(pending_values) > 0 {

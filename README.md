@@ -52,6 +52,15 @@ Note to self: compare performance with a python program made with the same slow 
 Learned a constructor pattern in go when dynamically creating ropes in the task. Otherwise nothing new, just spammed 70 lines of if-else logic.
 
 #### Day 10
-Sounded trivial task, but took suprisingly long...cycle step where the register must be mutated caused some headache. Second part was easier as it has been so far. It seems that already at day 10, solving the algorithm takes more time than managing the quirks of the language i'm learning.
+Sounded trivial task, but took suprisingly long...cycle step where the register must be mutated caused some headache. Second part was easier as it has been so far in other tasks also. It seems that already at day 10, solving the algorithm takes more time than managing the quirks of the language i'm learning.
 
 #### Day 11
+First time I had too look for external help. The wording in part two was little too misleading for me and I didn't understand too look for common denominator between the divisible rules. I first tought there was some kind of optimal pattern so only the monkeys with addition operations could pass the items between each other, so the worry levels wouldn't increase with so fast pace. Nothing too fancy codewise.
+
+#### Day 12
+Hardest so far. Reminded of the university CS studies back in the day. Implemented the pathfinding algorithm with A\*. Came out pretty neat. I used the pseudocode from [wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm) as a reference (some of the rows didn't even need any alterations :D). Had to make simple visualization of the path, but it would be nice to make an animation of the pathfinding in work as a bonus (test https://github.com/gdamore/tcell ?).
+
+
+#### Day 13
+
+
