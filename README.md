@@ -60,7 +60,5 @@ First time I had too look for external help. The wording in part two was little 
 #### Day 12
 Hardest so far. Reminded of the university CS studies back in the day. Implemented the pathfinding algorithm with A\*. Came out pretty neat. I used the pseudocode from [wikipedia](https://en.wikipedia.org/wiki/A*_search_algorithm) as a reference (some of the rows didn't even need any alterations :D). Had to make simple visualization of the path, but it would be nice to make an animation of the pathfinding in work as a bonus (test https://github.com/gdamore/tcell ?).
 
-
 #### Day 13
-
-
+This was actually quite usefull. Learned about interfaces. How to read ambigious (e.g. JSON) data into an empty interface and how to use the sorting interface (need to define Len, Less and Swap -methods to a type in order to use the general Sort function from sort package). I used type assertions to get the underlying concrete value of Packet interface (list/int). In python or similar plain old type() -check would have been enough and a lot more verbose than this.

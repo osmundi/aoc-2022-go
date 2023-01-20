@@ -15,12 +15,24 @@ func Hello(name string) string {
 	return message
 }
 
-func Data(part int, sep string) []string {
+func Data(part int, sep string, args ...bool) []string {
 	if sep == "" {
 		sep = "\n"
 	}
 
-	b, err := os.ReadFile("data.csv")
+    test := false
+	var b []byte
+	var err error
+
+    if len(args) > 0 {
+        test = args[0]
+    }
+
+	if test {
+		b, err = os.ReadFile("test_data.csv")
+	} else {
+		b, err = os.ReadFile("data.csv")
+	}
 
 	if err != nil {
 		fmt.Print(err)
