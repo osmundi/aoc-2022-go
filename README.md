@@ -62,3 +62,15 @@ Hardest so far. Reminded of the university CS studies back in the day. Implement
 
 #### Day 13
 This was actually quite usefull. Learned about interfaces. How to read ambigious (e.g. JSON) data into an empty interface and how to use the sorting interface (need to define Len, Less and Swap -methods to a type in order to use the general Sort function from sort package). I used type assertions to get the underlying concrete value of Packet interface (list/int). In python or similar plain old type() -check would have been enough and a lot more verbose than this.
+
+Note to self: maybe you should check how someone else has unmarshalled the list data and what kind of datastructure has been used there.
+
+#### Day 14
+Good looking cave. It was fun filling it with sand. There is probably lot of room to optimize the algorithm, but nevertheless it run the program and visualization pretty swiftly (~1s). 
+
+#### Day 15
+For the first time part 2 took most of the time. It came clear quite soon that this wouldn't be reasonable to brute force, so the algorithm searchers the southermost intersection point of every possible sensor coverage area and tests only the points one step lower of this intersecion point (561 points needed to be looked instead of 1,6×10¹³). Theres probably a multitude of ways to solve this, so it would be interesting to see some other solutions.
+
+
+
+
