@@ -71,6 +71,7 @@ Good looking cave. It was fun filling it with sand. There is probably lot of roo
 #### Day 15
 For the first time part 2 took most of the time. It came clear quite soon that this wouldn't be reasonable to brute force, so the algorithm searchers the southermost intersection point of every possible sensor coverage area and tests only the points one step lower of this intersecion point (561 points needed to be looked instead of 1,6×10¹³). Theres probably a multitude of ways to solve this, so it would be interesting to see some other solutions.
 
+#### Day 16
+I really tried to figure this out on my own. Tried to read about different (weighted) graph traversal alhgorithms and travelling salesman problem, but soon figured out that this is too much for me. Or at least too much compared to the time im ready to invest into. So after checking couple neat python solutions, reading about Floyd–Warshall algorithm, dynamic programming and watching (c++) explanation video from youtube, I had a some kind of idea of how to do this and implemented recursive dynamic programming algorithm. In the end it looked easy and run quickly, but still felt like i didn't earn even a half start out of this.
 
-
-
+#### Day 17

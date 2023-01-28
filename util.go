@@ -1,6 +1,7 @@
 package util
 
 import (
+	"errors"
 	"fmt"
 	"os"
 	"strconv"
@@ -8,25 +9,18 @@ import (
 	"unicode"
 )
 
-// Hello returns a greeting for the named person.
-func Hello(name string) string {
-	// Return a greeting that embeds the name in a message.
-	message := fmt.Sprintf("Hi, %v. Welcome!", name)
-	return message
-}
-
 func Data(part int, sep string, args ...bool) []string {
 	if sep == "" {
 		sep = "\n"
 	}
 
-    test := false
+	test := false
 	var b []byte
 	var err error
 
-    if len(args) > 0 {
-        test = args[0]
-    }
+	if len(args) > 0 {
+		test = args[0]
+	}
 
 	if test {
 		b, err = os.ReadFile("test_data.csv")
@@ -98,5 +92,44 @@ func Unique(arr string) bool {
 	}
 
 	return true
+}
+
+func Min(values []int) (min int, e error) {
+	if len(values) == 0 {
+		return 0, errors.New("Cannot detect a minimum value in an empty slice")
+	}
+
+	min = values[0]
+	for _, v := range values {
+		if v < min {
+			min = v
+		}
+	}
+
+	return min, nil
+}
+
+func Max(values []int) (max int, e error) {
+	if len(values) == 0 {
+		return 0, errors.New("Cannot detect a maximum value in an empty slice")
+	}
+
+	max = values[0]
+	for _, v := range values {
+		if v > max {
+			max = v
+		}
+	}
+
+	return max, nil
+}
+
+func Contains[T comparable](s []T, e T) bool {
+    for _, v := range s {
+        if v == e {
+            return true
+        }
+    }
+    return false
 }
 
