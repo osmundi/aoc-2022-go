@@ -75,3 +75,24 @@ For the first time part 2 took most of the time. It came clear quite soon that t
 I really tried to figure this out on my own. Tried to read about different (weighted) graph traversal alhgorithms and travelling salesman problem, but soon figured out that this is too much for me. Or at least too much compared to the time im ready to invest into. So after checking couple neat python solutions, reading about Floyd–Warshall algorithm, dynamic programming and watching (c++) explanation video from youtube, I had a some kind of idea of how to do this and implemented recursive dynamic programming algorithm. In the end it looked easy and run quickly, but still felt like i didn't earn even a half start out of this.
 
 #### Day 17
+Part 1 was quite straightforward. Tried to optimize code for the part 2, but soon realized that this couldn't be brute forced in a reasonable time. At least learned to do some basic code profiling with go. Finally found the pattern by saving wind gusts that has moved rock and the amount of moves rock has taken. This was so exhausting that I just ended doing lot of the calcuting with python intepreter so the go program wont give straight answer to part 2.
+
+#### Day 18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

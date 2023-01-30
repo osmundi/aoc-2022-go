@@ -133,3 +133,14 @@ func Contains[T comparable](s []T, e T) bool {
     return false
 }
 
+
+// MapKeys returns a slice of all the keys in m.
+// The keys are not returned in any particular order.
+func MapKeys[Key comparable, Val any](m map[Key]Val) []Key {
+    s := make([]Key, 0, len(m))
+    for k := range m {
+        s = append(s, k)
+    }
+    return s
+}
+
