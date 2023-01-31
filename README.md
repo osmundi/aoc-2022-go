@@ -78,6 +78,9 @@ I really tried to figure this out on my own. Tried to read about different (weig
 Part 1 was quite straightforward. Tried to optimize code for the part 2, but soon realized that this couldn't be brute forced in a reasonable time. At least learned to do some basic code profiling with go. Finally found the pattern by saving wind gusts that has moved rock and the amount of moves rock has taken. This was so exhausting that I just ended doing lot of the calcuting with python intepreter so the go program wont give straight answer to part 2.
 
 #### Day 18
+Managed to get only one start again. I tried to solve part 2 by trying to find outer limits of the droplet from every open side of the single cubes. Algorithm worked on the test data and with a bit more complex test data I generated myself (because the initial one was too simple). I didn't find out the edge case that brokes the DFS algorithm which traverses through the airpocket and tries to find out of the droplet. Lots of room for optimization also.. part 2 ran over 5s.
+
+#### Day 19
 
 
 
