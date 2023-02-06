@@ -81,7 +81,9 @@ Part 1 was quite straightforward. Tried to optimize code for the part 2, but soo
 Managed to get only one start again. I tried to solve part 2 by trying to find outer limits of the droplet from every open side of the single cubes. Algorithm worked on the test data and with a bit more complex test data I generated myself (because the initial one was too simple). I didn't find out the edge case that brokes the DFS algorithm which traverses through the airpocket and tries to find out of the droplet. Lots of room for optimization also.. part 2 ran over 5s.
 
 #### Day 19
+Did with the same idea like day 16 (recursive DP). The implementation came out pretty long (>300 lines). Probably went little bit too far with the OOP and interfaces. At least the code came out somewhat readable. Did some optimization with limiting the amount of unnecessary robots and memoizing allready visited states but still it run quite long (~ 30s). Without these, it would have ran indefinetly. Code spends currently most of the time hashing the state and accesing it. Luckily the recursion depth didnt went too deep in this one, so I dont need to rethink some optional solution. This will do.
 
+#### Day 20
 
 
 
