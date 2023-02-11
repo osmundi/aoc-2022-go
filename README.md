@@ -84,6 +84,10 @@ Managed to get only one start again. I tried to solve part 2 by trying to find o
 Did with the same idea like day 16 (recursive DP). The implementation came out pretty long (>300 lines). Probably went little bit too far with the OOP and interfaces. At least the code came out somewhat readable. Did some optimization with limiting the amount of unnecessary robots and memoizing allready visited states but still it run quite long (~ 30s). Without these, it would have ran indefinetly. Code spends currently most of the time hashing the state and accesing it. Luckily the recursion depth didnt went too deep in this one, so I dont need to rethink some optional solution. This will do.
 
 #### Day 20
+No fancy algorithms, recursion or anything like that. Enjoyed a lot in a long time. This task could be a goood primer to learn about array indexing. I ended up reading [this](https://go.dev/blog/slices-intro) pretty well written introduction to arrays/slices. Struggled little bit with slicing a pointer (slice expression binds stronger than a dereference, so you must surround the pointer with parenthesis before slicing: (*arr)[n:n] ). Modulo arithmetics works differently (-2 % 7 != 5) in go than for example in python, which was bit suprising.  Also struggled a bit with off by one error (finally!). 
+
+#### Day 21
+
 
 
 
