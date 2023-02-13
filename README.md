@@ -87,7 +87,9 @@ Did with the same idea like day 16 (recursive DP). The implementation came out p
 No fancy algorithms, recursion or anything like that. Enjoyed a lot in a long time. This task could be a goood primer to learn about array indexing. I ended up reading [this](https://go.dev/blog/slices-intro) pretty well written introduction to arrays/slices. Struggled little bit with slicing a pointer (slice expression binds stronger than a dereference, so you must surround the pointer with parenthesis before slicing: (*arr)[n:n] ). Modulo arithmetics works differently (-2 % 7 != 5) in go than for example in python, which was bit suprising.  Also struggled a bit with off by one error (finally!). 
 
 #### Day 21
+Algorithm solves recursively the value of branch from binary syntax tree where the 'humn' variable cannot be found and buffers the operations that connects it to the another branch, to a list until the 'humn' leaf has been found. After that the buffered inversed operations are applied to the the right side of the root equation. At first I had problems with precision values and resorted to using even the Decimal package, but soon enough figured out that I had bug in the inversed arithmetics. 
 
+#### Day 22
 
 
 
