@@ -90,6 +90,8 @@ No fancy algorithms, recursion or anything like that. Enjoyed a lot in a long ti
 Algorithm solves recursively the value of branch from binary syntax tree where the 'humn' variable cannot be found and buffers the operations that connects it to the another branch, to a list until the 'humn' leaf has been found. After that the buffered inversed operations are applied to the the right side of the root equation. At first I had problems with precision values and resorted to using even the Decimal package, but soon enough figured out that I had bug in the inversed arithmetics. 
 
 #### Day 22
+Wasn't too hard, but the part 2 was really frustrating. Did a 500 LOC solution and after that didn't have energy to refactor the code more readable (some shitty function names and lots of repetition...). I thought that I was smart by bit shifting the rotations, but this made things just more complex. Wasted too much time for simple thing like this. Doesn't fit also the go philosophy of keeping things simple and verbose. 
+
 
 
 
