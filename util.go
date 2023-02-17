@@ -125,22 +125,41 @@ func Max(values []int) (max int, e error) {
 }
 
 func Contains[T comparable](s []T, e T) bool {
-    for _, v := range s {
-        if v == e {
-            return true
-        }
-    }
-    return false
+	for _, v := range s {
+		if v == e {
+			return true
+		}
+	}
+	return false
 }
-
 
 // MapKeys returns a slice of all the keys in m.
 // The keys are not returned in any particular order.
 func MapKeys[Key comparable, Val any](m map[Key]Val) []Key {
-    s := make([]Key, 0, len(m))
-    for k := range m {
-        s = append(s, k)
-    }
-    return s
+	s := make([]Key, 0, len(m))
+	for k := range m {
+		s = append(s, k)
+	}
+	return s
 }
 
+func MapValues[Key comparable, Val any](m map[Key]Val) []Val {
+	s := make([]Val, 0, len(m))
+	for _, val := range m {
+		s = append(s, val)
+	}
+	return s
+}
+
+func DuplicateInArray[T comparable](arr []T) T {
+	var null T
+	visited := make(map[T]bool, 0)
+	for i := 0; i < len(arr); i++ {
+		if visited[arr[i]] == true {
+			return arr[i]
+		} else {
+			visited[arr[i]] = true
+		}
+	}
+	return null
+}

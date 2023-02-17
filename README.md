@@ -93,7 +93,10 @@ Algorithm solves recursively the value of branch from binary syntax tree where t
 Wasn't too hard, but the part 2 was really frustrating. Did a 500 LOC solution and after that didn't have energy to refactor the code more readable (some shitty function names and lots of repetition...). I thought that I was smart by bit shifting the rotations, but this made things just more complex. Wasted too much time for simple thing like this. Doesn't fit also the go philosophy of keeping things simple and verbose. 
 
 
+#### Day 23
+Game of life kind of task. After reading the initial task I was pretty sure that in part 2 one would have to find the correct instructions for movements in order to get the elfs settled in certain position or area. But this was all in all quite easy compared to the many earlier ones.
 
+#### Day 24
 
 
 
