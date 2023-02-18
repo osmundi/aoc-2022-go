@@ -97,7 +97,9 @@ Wasn't too hard, but the part 2 was really frustrating. Did a 500 LOC solution a
 Game of life kind of task. After reading the initial task I was pretty sure that in part 2 one would have to find the correct instructions for movements in order to get the elfs settled in certain position or area. But this was all in all quite easy compared to the many earlier ones.
 
 #### Day 24
+Part 1 done and had the part 2 ok for test data, but for some reason the result went off with the bigger map. No snacks for the elves today.
 
+#### Day 25
 
 
 

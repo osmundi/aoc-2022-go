@@ -133,6 +133,17 @@ func Contains[T comparable](s []T, e T) bool {
 	return false
 }
 
+func FilterValueFromArray[T comparable](arr []T, value T) []T {
+	rv := make([]T, 0)
+	for _, v := range arr {
+		if v == value {
+			continue
+		}
+		rv = append(rv, v)
+	}
+	return rv
+}
+
 // MapKeys returns a slice of all the keys in m.
 // The keys are not returned in any particular order.
 func MapKeys[Key comparable, Val any](m map[Key]Val) []Key {
@@ -163,3 +174,22 @@ func DuplicateInArray[T comparable](arr []T) T {
 	}
 	return null
 }
+
+func CopyArray[T comparable](arr []*T) []*T {
+	c := make([]*T, len(arr))
+	for i, p := range arr {
+
+		if p == nil {
+			// Skip to next for nil source pointer
+			continue
+		}
+
+		// Create shallow copy of source element
+		v := *p
+
+		// Assign address of copy to destination.
+		c[i] = &v
+	}
+	return c
+}
+
