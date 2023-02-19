@@ -100,8 +100,10 @@ Game of life kind of task. After reading the initial task I was pretty sure that
 Part 1 done and had the part 2 ok for test data, but for some reason the result went off with the bigger map. No snacks for the elves today.
 
 #### Day 25
+Puzzle master went didn't leave the toughest ones to end. Thats good thinking because people tend to have other stuff on mind during these days. 
 
 
+### Summary
 
 
 
