@@ -40,7 +40,7 @@ Note to self: is it ok to use copy-paste code (util.Unique -method) if you're tr
 #### Day 7
 Pointers, (kind of?) linked list, recursion. This was so far maybe the most sophisticated answer. First time felt like I was doing something right. At least on the part where the filesystem is initialized. The part 2 answer was hacked together in a quick and dirty way. 
 
-Notes after the first week:  I'm already flying with this tool without constantly having the need to refer the [documentation](https://pkg.go.dev/std)(which is OK)/google. I still don't have too strong opinion about the language. Really like the simplicity of it and coding with a statically typed language brings a sense of relaibility and robustness to the code. At first handling the pointer logic was a shock (after a 10 year break from writing last bits of C -code) but with this last challenge, it seemed the right way to do it. No need to pollute the memory with unnecessary stuff whether there is a garbage collector or not.
+Notes after the first week:  I'm already flying with this tool without constantly having the need to refer the [documentation](https://pkg.go.dev/std)(which is OK)/google. I still don't have too strong opinion about the language. Really like the simplicity of it and coding with a statically typed language brings a sense of reliability and robustness to the code. At first handling the pointer logic was a shock (after a 10 year break from writing last bits of C -code) but with this last challenge, it seemed the right way to do it. No need to pollute the memory with unnecessary stuff whether there is a garbage collector or not.
 
 #### Day 8
 Figuring out the edge cases took more time than implementing the algorithm itself. 
@@ -100,19 +100,8 @@ Game of life kind of task. After reading the initial task I was pretty sure that
 Part 1 done and had the part 2 ok for test data, but for some reason the result went off with the bigger map. No snacks for the elves today.
 
 #### Day 25
-Puzzle master went didn't leave the toughest ones to end. Thats good thinking because people tend to have other stuff on mind during these days. 
+Puzzle master didn't leave the toughest ones to end. Thats good thinking because people tend to have other stuff on mind during these days. Tried to brute force and build all possible permutations to the end result and it worked with the test snafus pretty well, but of course not with longer set. I haven't learned anything about the nature of these aoc puzzles yet...fixed it to a faster version where problem is divided to subtasks and solved one by one so there wont be so many recursions.  
 
 
 ### Summary
-
-
-
-
-
-
-
-
-
-
-
-
+There were lots of similarities with the differnt days. You get good at solving these pretty quickly and start to find patterns in different tasks (quite many of the days involved somekind of recursive search with memoization). Still most of the time goes into solving the algorithm. When I had a solution in mind in the latter probelems I could from time to time get into a good flow with go. After a good month of doing this challenge I really feel mastering the basics with the language. This was a good starting point and now its time to move on to the deeper end with goroutines etc. 
